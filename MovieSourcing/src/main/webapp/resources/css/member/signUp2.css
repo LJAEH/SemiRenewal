@@ -1,0 +1,269 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+/* 회원가입 인풋 설정 */
+input {
+    border-radius: 5px;
+    padding : 0 13px;
+    outline: none;
+}
+input:focus {
+    border : 3px solid rgb(255, 234, 213);
+}
+input::placeholder {
+    font-size: 16px;
+}
+
+
+
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    max-width: 700px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+}
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+.infomation > div > span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.signup {
+    display : flex;
+    text-align: center;
+    margin : 16px auto 30px;
+    justify-content: center;
+}
+
+.top {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.infomation {
+    padding : 40px 15%;
+    margin : 8px 0;
+    border-radius: 15px;
+    background-color:  rgb(57, 41, 41);
+
+}
+.infomation > div {
+    display : flex;
+    flex-direction: column;
+}
+
+.idinput{
+    margin : 10px 0; 
+    display : flex;
+    justify-content: left;
+}
+
+.idinput > input {
+    width : 80%;
+    height : 50px;
+    margin-right: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.dupcheckbox {
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    width : 15%;
+
+}
+
+.dupcheck {
+    margin : auto;
+    background-color: rgb(175, 161, 158);
+    height : 30px;
+    width : 100%;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.pwwrap1{
+    margin : 15px 0; 
+    display : flex;
+    justify-content: left;
+}
+.pwinput1 {
+    margin : 10px 0; 
+}
+
+.pwinput1 > input {
+    width : 100%;
+    height : 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+    
+}
+
+#pwword {
+    display: flex;
+    justify-content: space-between;
+}
+#pwword > span:nth-of-type(1){
+    font-weight: bold;
+    font-size: 20px;
+    width: 50%;
+}
+#pwCheck {
+    width: 50%;
+    text-align: right;
+}
+
+.pwinput2 {
+    margin : 10px 0; 
+}
+
+.pw2wrap{
+    display : flex;
+    justify-content: left;
+}
+
+.pwinput2 > input {
+    width : 100%;
+    height : 50px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+.nicknameinput{
+    margin : 10px 0; 
+    display : flex;
+    justify-content: left;
+}
+
+.nicknameinput > input {
+    width : 80%;
+    height : 50px;
+    margin-right: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.line {
+    margin : 40px 0;
+    background-color:  gray;
+    color : gray;
+
+}
+
+.savebox{
+    display : flex;
+    flex-direction: column; 
+    margin : 10px auto 80px;
+}
+
+.savebox > button {
+    margin : auto;
+    width: 90%;
+    background-color:rgb(181, 133, 128);
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 60px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.genderbox {
+    margin : 15px 0; 
+    display : flex;
+    justify-content: left;
+
+}
+
+.birthwrap{
+    margin : 15px 0; 
+    display : flex;
+    justify-content: left;
+}
+
+.birthbox {
+    margin : 10px 0; 
+}
+
+.birthyear{
+    width : 100%;
+    height : 50px;
+    margin-right: 5%;
+}
+
+.yearbox {
+    width : 200px;
+    height : 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.monthbox {
+    width : 100px;
+    height : 50px;
+    font-size: 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,358 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    max-width: 700px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+}
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+.profilebox {
+    margin : 0 auto;
+    padding : 16px 0 20px;
+    max-width : 700px;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#profileimg{
+    font-size: 120px;
+    color: white;
+    margin : 20px auto 20px;
+}
+.profilebox > a {
+    font-size: 16px;
+    color : gray;
+    font-weight: bold;
+    margin: 0 0 15px;
+}
+
+.email1{
+    font-size : 18px;
+    font-weight: bold;
+    margin : 0;
+}
+
+.email2 {
+    font-size : 18px;
+    color: gray;
+    margin : 0 ;
+    font-weight: bold;
+}
+
+.passwordbox{
+    display : flex;
+    flex-direction: column; 
+    margin : 20px auto 0;
+    max-width : 700px;
+    
+}
+
+.passwordbox > div {
+    padding : 0 24px;
+    margin : 8px 0;
+    height : 60px;
+    border : 5px solid rgb(57, 41, 41);
+    border-radius: 15px;
+}
+
+.passwordbox > div > input {
+    height : 100%;
+    width : 100%;
+    background-color: transparent;
+    border-style: none;
+    outline : 0;
+    font-size: 20px;
+    color : white;
+}
+
+.passwordboxdiv3{
+    display : flex; 
+    justify-content: space-between;
+}
+
+.newPw2 {
+    width: 40%;
+}
+
+#pwCheck {
+    width: 60%;
+    text-align: right;
+    line-height: 50px;
+    font-size: 16px;
+}
+
+
+.nicknamebox {
+    display : flex;
+    flex-direction: column; 
+    margin : 20px auto;
+
+}
+
+.nicknamebar {
+    display : flex;
+    justify-content: space-between;
+}
+
+.nicknameinsert {
+    padding : 16px 24px;
+    margin : 8px 0;
+    height : 60px;
+    border-radius: 15px;
+    background-color:  rgb(57, 41, 41);
+} 
+
+.nicknamebox > div > textarea {
+    height : 100%;
+    width : 100%;
+    background-color: transparent;
+    border-style: none;
+    outline : 0;
+    font-size: 20px;
+    color : rgb(162, 148, 148);
+    font-weight: bold;
+}
+.passwordbox > div > input::placeholder {
+    color : rgb(162, 156, 156);
+    font-weight: 700;
+}
+
+
+.introducebox {
+    display : flex;
+    flex-direction: column; 
+    margin : 20px auto;
+
+}
+
+.introducebar {
+    display : flex;
+    justify-content: space-between;
+}
+
+.introduceinsert {
+    padding : 15px 24px;
+    margin : 8px 0;
+    height : 140px;
+    border-radius: 15px;
+    background-color:  rgb(57, 41, 41);
+} 
+
+
+#introduceArea {
+    height : 100%;
+    width : 100%;
+    background-color: transparent;
+    border-style: none;
+    outline : 0;
+    font-size: 20px;
+    color : rgb(162, 148, 148);
+    font-weight: bold;
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing: border-box;
+    
+    
+    
+}
+
+textarea::placeholder{
+    color:  rgb(162, 148, 148);
+
+}
+
+.line {
+    margin : 40px 0;
+    background-color:  gray;
+    color : gray;
+
+}
+
+.leftpadding {
+    padding-left: 15px;
+    font-weight: bold;
+}
+
+.savebox{
+    display : flex;
+    flex-direction: column; 
+    margin : 10px auto 80px;
+}
+
+.savebox > button {
+    margin : auto;
+    width: 90%;
+    background-color:rgb(142, 130, 130);
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 60px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* 하단 a 스타일 */
+
+
+#aDiv{
+    display : flex;
+    flex-direction: column ;
+}
+
+.aStyle {
+    margin : 0px 0 25px;
+    font-size: 20px;
+    color :rgb(162, 148, 148);
+    font-weight: bold;
+}
+
+/* 비밀번호 변경 모달 창 */
+
+#newPwOverlay{
+    display : none;
+    flex-direction: column;
+    position :absolute ;
+
+    width : 100%;
+    height : 1030px;
+    min-width: 320px;
+
+    background-color: rgb(171, 145, 145, 0.25);
+    
+    -webkit-backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(1.5px);
+
+    left: 0 ;
+    top:  0 ;
+}
+
+.passwordbox {
+    border : 4px solid rgb(155, 69, 69) ;
+
+    width : 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    padding : 20px 50px 30px;
+
+    margin : 0 auto 100px;
+
+    position : relative;
+    display : flex;
+    flex-direction: column;
+
+
+    background-color: rgba(0, 0, 0, 0.98);   
+    box-shadow: 0 8px 32px 0 rgba(48, 48, 55, 0.37);
+    -webkit-backdrop-filter: blur(1.5px);
+    backdrop-filter: blur(1.5px);   
+    display : flex;
+    margin : auto;
+
+    bottom: -250px;
+}
+
+#modalTitle {
+    border-style: none;
+    display : flex;
+}
+#modalTitle span {
+    font-size: 22px;
+    font-weight: bold;
+    color:rgb(162, 156, 156);
+    margin : 0 auto 100px;
+}
+.passwordbox button {
+    margin: auto;
+    width : 80%;
+    height : 50px;
+    background-color :rgb(57, 41, 41);
+    outline: none;
+    border-style: none;
+    border-radius: 20px;
+    margin-top: 20px;
+
+    cursor: pointer;
+   
+}
+
+.passwordbox button > span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+
+
+
+
+#profileimg{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin : 20px auto 20px;
+}
+
+#input-image{
+    display: none;
+}

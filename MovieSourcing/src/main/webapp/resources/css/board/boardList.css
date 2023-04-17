@@ -1,0 +1,286 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    
+}
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body a {
+	text-decoration: none;
+	color:white;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+   /* width: 1500px; */
+}
+
+/* 태그 main */
+main{
+    max-width: 800px;
+    min-width: 500px;
+    margin: auto;
+    display: flex;
+    margin-top : 50px;
+}
+
+/* 섹션의 메인클래스 */
+.main{
+    display: flex;
+    width:100%;
+    flex-basis: 100%;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 500px) {
+    .side {
+      display: none;
+    }
+} 
+
+/* 메인 태그 아래의 (메인클랙스 섹션 아래 커뮤니티) 그리고 (사이드) */
+.community{
+    /* border : 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+/* 서치 아레아 */
+.search_area{
+    /* border: 1px solid blue; */
+    display: flex;
+    width: 100%;
+    margin: 20px auto 20px;
+    justify-content: center;
+}
+
+.search_area > div:first-child{
+    width: 90%;
+    margin-left: 20px;
+}
+
+
+/* 서치아레아 인풋 */
+#search_bar{
+    background-color: black;
+    height: 30px;
+    width: 90%;
+    border: none;
+    border-bottom: 3px solid gray;
+    outline: none;
+    padding-left: 10px;
+    font-size: 20px;
+    color:white;
+}
+
+#writeBtn{
+	background-color: #CBE4DE;
+    border: none;
+    font-weight: bold;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 1.5% 3%;
+    font-size: 100%;
+    width :15%;
+    cursor: pointer;
+}
+
+/* --------------------------------------------------- */
+
+/* 커뮤 아레아 */
+.boardNo{
+	display: none;
+}
+
+.commu_area{
+    display: flex;
+    flex-direction: column;
+}
+
+.com_box{
+    background-color: #2C3333;
+    margin: 20px 0;
+    border-radius: 20px;
+    padding: 20px;
+    width: 100%;
+}
+
+#com_cont{
+    cursor: pointer;
+}
+
+.com_box img{
+    width: 100%;
+}
+
+.com_box > div{
+    margin: 10px 0;
+}
+
+/* 커뮤 아레아 아래 컴박스(정보묶음) */
+/* 유저에 대한 내용 */
+.com_member{
+    display: flex;
+    justify-content: space-between;
+}
+
+.user_pic_nic{
+    display: flex;
+}
+
+.user_pic_nic > a:first-child {
+    margin: 0 10px;
+}
+
+.user_pic_nic > a{
+    text-decoration: none;
+    color: white;
+    
+}
+
+.com_date{
+    margin: 0 10px;
+    color: white;
+}
+
+/* 컨텐츠 제목 */
+.com_title{
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.com_title a{
+    color: rgb(176, 167, 167);
+
+}
+
+/* 컨텐츠 내용 */
+/* 불러올 때 subString으로 글자 길이수 잘라서 나오게 하고, 뒤에 '+' ... 붙이기 */
+.com_cont {
+    height: 100px;
+    overflow: hidden;
+    color: white;
+}
+
+.com_cont img{
+    display: none;
+}
+
+/* 컴박스 썸네일 */
+.com_thunmnail{
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    height: auto;
+    max-height: 300px;
+}
+
+.com_img{
+    width: 100%;
+}
+
+/* 조회수 및 리플 */
+.readCnt_replyCnt{
+    display: flex;
+    color: white;
+}
+
+.readCnt_replyCnt > div {
+    margin: 0 5px;
+}
+
+.readCnt_replyCnt > div > i{
+    margin: 0 3px;
+}
+
+/* ------------------------------------------------------------------------------------*/
+
+/*페이지네이션*/
+
+.pagination-area{
+	margin-top: 50px;
+}
+
+.pagination{
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.pagination > li{
+    width: 20px;
+    margin: 0 5px;
+    text-align: center;
+}
+
+.pagination a{
+    width: 100%;
+    height: 100%;
+    display: block;
+    color : white;
+    text-decoration: none;
+    /* letter-spacing : -2px; */
+}
+
+/* 현재 페이지 번호 */
+.pagination .current{
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------*/
+
+/* 사이드바 */
+.side-1 {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 100px;
+}
+
+.side-1 > a {
+    padding-left : 30px;
+}
+
+.side-1 > div:last-of-type{
+    display: flex;
+    justify-content: right;
+    padding: 5px;
+}
+
+.side-1 > div:last-of-type > button{
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: transparent;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+

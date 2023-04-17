@@ -1,0 +1,199 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 480px;
+    background-color: black;
+    max-width: 700px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+.top {
+    display : flex;
+    text-align: center;
+    margin : 50px auto 30px;
+    justify-content: center;
+}
+#topName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#contents > div {
+    margin : 10px 0;
+}
+
+.bold2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+.reviewContainer {
+    min-height: 1000px;
+}
+
+.reviewbox {
+    margin : 10px 0 20px;
+    background-color: rgb(26, 26, 34);
+    padding : 20px;
+    display : flex;
+    flex-direction: column;
+    border-radius : 20px;
+}
+
+.review1 {
+    display : flex;
+    justify-content: space-between;
+}
+
+.moviewrap{
+    display : flex;
+}
+
+.reviewScoreBox{
+    display : flex;
+}
+
+#poster{
+    width: 50px;
+    border-radius: 4px;
+}
+.review {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.reviewInfo {
+    display : flex;
+    justify-content: space-between;
+}
+
+#reviewName {
+    font-size: 20px;
+    font-weight: bold;
+}
+.reviewScoreBox{
+    margin-top: 4px;
+    border-radius: 4px;
+    border: 1px solid rgb(207, 200, 200);
+    padding : 4px 8px;
+}
+
+.scoreLight {
+    margin: auto;
+    margin-left: 20px;
+    border-radius: 50%;
+    width : 17px;
+    height : 17px;
+    background-color: white;
+}
+
+#userScore {
+    margin: auto;
+    margin-left: 4px;
+}
+
+
+.navHeader {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
+    width: 100%;
+    border-bottom: 0;
+    box-shadow: 0 -4px 16px rgba(0,0,0,.32);
+    background-color: rgb(20, 20, 21);
+}
+
+
+.nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+.nav > a {
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 80px;
+    height: 58px;
+    margin : auto;
+    position: relative;
+
+}
+
+.nav > a > i {
+    margin-top: 8px;
+    color : white;
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.nav > a > span {
+    font-size: 12px;
+}
+
+
+

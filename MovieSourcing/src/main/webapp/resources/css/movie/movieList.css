@@ -1,0 +1,207 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 360px;
+    background-color: black;
+    max-width: 700px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+/* 배우/감독 정보 */
+
+.actorInfo {
+    margin-top: 40px ;
+    display : flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#actorImg {
+    width : 130px;
+    border-radius: 50%;
+}
+
+#actorName {
+    font-size: 22px;
+    font-weight: bold;
+    margin : 20px 0 40px;
+}
+#actorEngName {
+    font-size : 16px;
+    font-weight: 600;
+    color : gray;
+}
+
+#information {
+    display : flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* 리스트 부분 */
+
+#selectedMovie {
+    display : flex;
+    flex-wrap : wrap;
+}
+
+#listBox{
+    background-color: rgb(33, 30, 40);
+    display : flex;
+    flex-direction: column;
+    width : 24%;
+    padding : 10px;
+    margin : 3px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+#movieListLink > div{
+    display : flex;
+    margin : 5px 0;
+}
+
+#movieListLink > div:nth-of-type(3){
+    justify-content: space-between;
+}
+
+
+#listPoster {
+    width : 100%;
+    border-radius: 3px;
+}
+.fa-solid fa-circle{
+    font-size: 90%;
+}
+#movieTitle {
+    margin: auto;
+    font-weight: bold;
+}
+
+#menu {
+    color : rgb(151, 143, 143);
+}
+
+
+
+
+
+
+
+
+/* 네비 */
+
+.navHeader {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 99999;
+    width: 100%;
+    border-bottom: 0;
+    box-shadow: 0 -4px 16px rgba(0,0,0,.32);
+    background-color: rgb(20, 20, 21);
+}
+
+
+.nav {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+.nav > a {
+    display : flex;
+    flex-direction: column;
+    text-align: center;
+    min-width: 80px;
+    height: 58px;
+    margin : auto;
+    position: relative;
+
+}
+
+.nav > a > i {
+    margin-top: 8px;
+    color : white;
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.nav > a > span {
+    font-size: 12px;
+}
+
+/* 
+#popUp {
+    position:absolute;
+    left : 0;
+    right : 0;
+    margin : auto;
+    border-radius: 20px;
+    width : 60%;
+    height : 60%;
+    display : none;
+    background-color: rgb(47, 44, 44);
+} */

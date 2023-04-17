@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+}
+.main{
+    max-width: 800px;
+    min-width: 500px; 
+    margin: auto;
+    background-color: black;
+} 
+
+button:hover, button:focus {
+  cursor: pointer;
+  outline: none;
+}
+
+/* -------------------------------------------------------- */
+/* head_area */
+.head_area{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.head_area > h3{
+  /* color: #F96; */
+  color: #CBE4DE;
+  font-size: 150%;
+
+}
+
+#back_btn {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    font-weight: bold;
+    color:  #CBE4DE;
+}
+
+#save_btn{
+    background: #CBE4DE;
+    border: none;
+    font-weight: bold;
+    color: black; 
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 1.5% 3%;
+    font-size: 100%;
+}
+
+/* ----------------------------------------------- */
+/* content */
+#content{
+  margin-top: 5%;
+  background-color: #2C3333;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* 타이틀 */
+#input_title{
+  margin-top: 3%;
+  margin-bottom: 2%;
+  background-color: #2C3333;
+  padding: 1.5%;
+  width: 97%;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid white;
+  font-size: 100%;
+  color: whitesmoke;
+  
+}
+
+::placeholder{
+  color: rgb(159, 156, 156);
+}
+
+/* input_div */
+#input_div{
+  padding : 0 1.5%;
+  width: 97%;
+  min-width: 500px;
+  min-height: 400px;
+  outline: none;
+  caret-color: white;
+  color: whitesmoke;
+}
+
+#input_div:empty:before {
+  content: attr(placeholder);
+}
+
+#input_div > img{
+  display: block; 
+  margin: 0 auto;
+  max-width: 600px;
+  max-height: 900px;
+}
+
+#input_div > div > img{
+  display: block; 
+  margin: 0 auto;
+  max-width: 600px;
+  max-height: 900px;
+}
+
+#placeholder_div{
+  color: rgb(159, 156, 156);
+}
+
+#content > div:last-of-type{
+  width: 100%;
+  display: flex;
+  padding: 3%;
+}
+
+#input_img{
+   display: none;
+}
+
+#input_img_btn{
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: bold;
+  font-size: 120%;
+}
+/* -------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

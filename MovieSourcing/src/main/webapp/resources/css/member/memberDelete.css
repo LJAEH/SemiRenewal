@@ -1,0 +1,160 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    max-width: 700px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+}
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+.delete {
+    display : flex;
+    text-align: center;
+    margin : 16px auto 30px;
+    justify-content: center;
+}
+
+.top {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.infomation {
+    display : flex;
+    flex-direction: column; 
+    margin : 20px auto;
+}
+
+.info {
+    padding : 20px 24px;
+    margin : 8px 0;
+    border-radius: 15px;
+    background-color:  rgb(57, 41, 41);
+} 
+.bold {
+    font-size: 18px;
+    font-weight: bold;
+}
+.infocontents{
+    color : rgb(162, 156, 156);
+}
+.deco {
+    text-decoration: underline;
+}
+
+.passwordbox{
+    display : flex;
+    flex-direction: column; 
+    margin : 20px auto 0;
+    max-width : 700px;
+    
+}
+
+.passwordbox > div {
+    padding : 0 24px;
+    margin : 8px 0;
+    height : 60px;
+    border : 5px solid rgb(57, 41, 41);
+    border-radius: 15px;
+}
+
+.passwordbox > div > input {
+    height : 100%;
+    width : 100%;
+    background-color: transparent;
+    border-style: none;
+    outline : 0;
+    font-size: 20px;
+    color : white;
+}
+
+
+.passwordbox > div > input::placeholder {
+    color : rgb(162, 156, 156);
+    font-weight: 700;
+}
+
+
+.line {
+    margin : 40px 0;
+    background-color:  gray;
+    color : gray;
+
+}
+
+
+.savebox{
+    display : flex;
+    flex-direction: column; 
+    margin : 10px auto 80px;
+}
+
+.savebox > button {
+    margin : auto;
+    width: 90%;
+    background-color:rgb(142, 130, 130);
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 60px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}

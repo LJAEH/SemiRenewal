@@ -1,0 +1,688 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    width: 1920px;
+    padding: 0;
+    position: relative;
+}
+main {
+  
+}
+
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+/*메인 포스터*/
+.main-slides {
+    position: absolute;
+    left: 0; top: 0;
+}
+
+.main-image {
+    position: relative;
+    width: 1920px;
+    margin: 0 auto;
+    height: 800px;
+    overflow: hidden;
+}
+.main-slides li {
+    width: 1920px;
+    height: 800px;
+    float: left;
+
+}
+.main-slides li:not(:last-child), .slides2 li:not(:last-child) {
+    
+    margin-right: 0px;
+}
+.main-slides.animated {
+    transition: 0.5s ease-in-out;
+}
+
+
+
+header {
+    margin: 0 ;
+    display: flex;
+    position: relative; /*부모요소에 relative하면 모바일에서
+                            위치가 이상하지 않음*/
+}
+header > div:nth-child(1) {
+    margin-bottom: 50px;
+    display: inline-block;
+}
+header > div:nth-child(1) ul {
+    padding: 0;
+    margin: 0;
+}
+header  > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    position: absolute;
+    margin-left: 150px;
+    margin-top: 50px;
+}
+header  > div:nth-child(3){
+    position: absolute;
+    left: 25%;
+    margin-top: 50px;
+}
+header  > div:nth-child(4){
+    position: absolute;
+    margin-top: 50px;
+    left: 75%;
+}
+.home-nav {
+    list-style: none;
+    display: flex;
+}
+.home-nav > li >a {
+    font-weight: bold;
+    margin-left: 100px;
+    color: white;
+    text-decoration: none;
+}
+.head-right {
+    display: flex;
+}
+.head-right  div {
+    margin: 10px;
+    font-size: 23px;
+    color: white;
+}
+.head-right  a {
+    font-size: 23px;
+    color: white;
+}
+.home-nav2 {
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.home-nav2 a {
+    color: white;
+    padding: 52px;
+    font-size: 1.5em;
+}
+.main {
+    display: flex;
+}
+.main > div:nth-child(1) {
+    flex-basis: 85%;
+}
+
+
+.chart > ul > li {
+    margin: 5px;
+    font-weight: bold;
+    color: white;
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+}
+.m-recommend {
+    position: relative;
+}
+.m-recommend > span {
+    position: absolute;
+    left: 60%;
+    top: 30%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'S-CoreDream-3Light';
+    text-shadow: 0px 4px 24px #f20;
+    margin-left: 250px;
+    margin-top: 100px;
+}
+
+.m-contents {
+    position: relative;
+    margin-top: 140px;
+}
+.m-contents > span{
+    position: absolute;
+    left: -55%;
+    top: 20%;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'S-CoreDream-3Light';
+    text-shadow: 0px 4px 24px #f20;
+    margin-left: 1200px;
+}
+
+.prev:hover{filter: opacity(0.5) drop-shadow(0 0 0 #2e333b);}
+.prev2:hover{filter: opacity(0.5) drop-shadow(0 0 0 #2e333b);}
+.next:hover{filter: opacity(0.5) drop-shadow(0 0 0 #2e333b);}
+.next2:hover{filter: opacity(0.5) drop-shadow(0 0 0 #2e333b);}
+
+
+
+.slide_wrapper {
+    position: relative;
+    width: 900px;
+    margin-left: 250px;
+    height: 300px;
+    overflow: hidden;
+    margin-top: 140px;
+}
+
+.slide_wrapper2 {
+    position: relative;
+    width: 900px;
+    margin-left: 500px;
+    height: 300px;
+    overflow: hidden;
+}
+
+
+.slides li img, .slides2 li img {
+    width: 200px;
+    height: 300px;
+}
+
+.slides, .slides2 {
+    position: absolute;
+    left: 0; top: 0;
+    width: 1810px;
+    padding: 0;
+}
+
+.slides.animated, .slides2.animated {
+    transition: left 0.5s ease-out;
+}
+
+
+
+.slides li:not(:last-child), .slides2 li:not(:last-child) {
+    float: left;
+    margin-right: 30px;
+}
+
+
+
+.controls {
+    margin-left: 580px;
+}
+.controls2 {
+    margin-left: 840px;
+}
+.controls span, .controls2 span {
+    border-radius: 50px;
+    background: #333;
+    color: #f20;
+    padding: 10px 20px;
+    margin: 0 20px;
+    font-size: 15px;
+    box-shadow: 3px 2px 4px #f20;;
+    cursor: pointer;
+}
+.controls span.prev, .controls2 span.prev2{right:calc(100% + 50px);}
+.controls span.next, .controls2 span.next2{left:calc(100% + 50px);}
+
+.controls span:hover {
+    border-radius: 50px;
+    background: #333;
+    color: #f20;
+    padding: 10px 20px;
+    margin: 0 20px;
+    font-size: 15px;
+    box-shadow: 0px 0px 0px ;
+    
+    cursor: pointer;
+}
+.controls2 span:hover {
+    border-radius: 50px;
+    background: #333;
+    color: #f20;
+    padding: 10px 20px;
+    margin: 0 20px;
+    font-size: 15px;
+    box-shadow: 0px 0px 0px ;
+    
+    cursor: pointer;
+}
+
+
+.community {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin : auto;
+    margin-top: 40px;
+    position: relative;
+}
+.community > span {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'S-CoreDream-3Light';
+    text-shadow: 0px 4px 24px #f20;
+    margin-top: 100px;
+}
+.community > a {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 97%;
+    top: 25%;
+}
+.community > a:hover{
+    cursor: pointer;
+}
+.community p, .community span {
+    color: white;
+}
+.community p {
+    font-weight: bold;
+}
+.community1 >div:nth-child(1) img, .community2 >div:nth-child(1) img {
+    width: 100px;
+    margin-right: 15px;
+    margin-left: 50px;
+}
+
+.community1, .community2 {
+    width: 100%;
+    display: flex;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+   
+   
+}
+.community1 {
+    border-bottom: 1px solid white;
+    box-shadow:0px 5px 5px -2px rgb(90, 18, 7);
+}
+
+
+.userimg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+}
+.userNick {
+    text-align: center;
+
+}
+
+.user {
+    display: flex;
+}
+.userInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 10px;
+}
+
+
+
+
+
+.review {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin : auto;
+    margin-top: 25px;
+    position: relative;
+}
+.review > span {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'S-CoreDream-3Light';
+    text-shadow: 0px 4px 24px #f20;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.review > a {
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    left: 97%;
+    top: 8%;
+}
+.review > a:hover {
+    cursor: pointer;
+}
+
+.review-content {
+    display: flex;
+}
+.review-content > div{
+    flex-basis: 25%;
+}
+.review-content span {
+    color: white;
+}
+
+.reviewTitle{
+	color:red !important;
+}
+
+.r-user {
+    display: flex;
+    align-items: center;
+
+}
+.r-user span {
+    margin-left: 10px;
+}
+
+/*div배치 고치기*/
+.review-content > div {
+   text-align: center; 
+   border: 1px solid white;
+   border-radius: 20px;
+   margin-left: 20px;
+   box-shadow: 2px 2px 2px 2px rgb(90, 18, 7);
+   height: 300px;
+   padding: 20px 20px;
+}
+.userimg2 {
+   
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+.side {
+    width: 200px;
+    padding-top: 50px;
+    margin-top: 100px;
+}
+.side-1 {
+    position: sticky;
+    top: 50px;
+}
+
+.side-1 > div:nth-child(2) a{
+    color: white;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    text-decoration: none;
+    opacity: 0;
+}
+.side-1 > div:nth-child(2) a.on {
+    opacity: 1;
+}
+
+
+ul, li {
+    list-style: none;
+}
+
+
+/* 차트 진해중 */
+
+
+
+.chart {
+    display: none;
+    position: relative;
+}
+.active {
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 400px;
+    margin-top: 150px;
+    margin-left: 100px;
+}
+
+.rotate {
+    position: absolute;
+    left: 100%;
+    top: 0%;
+    font-size: 25px;
+}
+
+
+.charts {
+    display: flex;
+}
+.charts img {
+    width: 200px;
+}
+
+
+
+.charts i {
+    font-size: 50px;
+    color: white;
+    text-shadow: 0px 4px 24px #f20;
+    margin-left: 40px;
+}
+.charts > li {
+    margin-left: 20px;
+}
+
+.active > span {
+    font-size: 25px;
+    color: white;
+    text-shadow: 0px 4px 24px #f20;
+    margin-left: 100px;
+    font-family: 'S-CoreDream-3Light';
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+footer {
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p a {
+    color: white;
+    text-decoration: none;
+    margin: 60px;
+}
+
+
+/* 인생영화관 (미완성) */
+.favorite {
+    margin-left: 320px;
+    margin-top: 30px;
+    margin-right: 60px;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.f-title {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'S-CoreDream-3Light';
+    text-shadow: 0px 4px 24px #f20;
+    margin-left: 0px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+}
+.f-rotate {
+    color: white;
+    position: absolute;
+    top: 5%;
+    left: 97%;
+    font-size: 25px;
+}
+.f-mlist1 {
+    display: flex;
+    
+}
+.f-mlist1 > div {
+    padding: 0px 5px;
+}
+.f-mlist2 {
+    display: flex;
+}
+.f-mlist2 > div{
+    padding: 0px 5px;
+}
+.favorite h4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 200px;
+    
+    border: 1px solid white;
+    box-shadow: 2px 2px 2px 2px rgb(90, 18, 7);
+    border-radius: 10px;
+}
+.favorite > div {
+    margin-left: 20px;
+}
+.favorite >span {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.btn {
+    cursor: pointer;
+}
+
+
+.head-right a:hover {
+    
+    color: red;
+    transition-duration: 0.5s;
+}
+
+.home-nav > li a { 
+    color: white;
+    text-transform:uppercase;
+    
+}
+    
+
+/* nav 밑줄 효과 */
+.home-nav > li a:after {
+    display:flex;
+    flex-direction:row;
+    margin-left: 100px;
+    content: '';
+    border-bottom: solid 2px #ea2129;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.home-nav > li a:hover:after { transform: scaleX(1); }
+
+/* a끼리의 간격 넓혀서 맞추기 */
+
+.home-nav > li:nth-child(1) {
+  margin-left: 60px;
+}
+/* li에 마진이 너무들어가있음 */
+
+
+
+.search-box{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    transform: translate(7%,2%);
+    height: 30px;
+    border-radius: 30px;
+    transition: 0.4s;
+    width:30px;
+  }
+  .search-box:hover{
+    background-color: white;
+    box-shadow: 0px 0px .5px 1px rgb(73, 73, 88);
+    width: 240px;
+    height: 35px;
+  }
+  .search-btn{
+    text-decoration: none;
+    float: right;
+    font-size: 25px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+  }
+  .search-box:hover > .search-btn{
+    background-color: white;
+    color: black;
+  }
+  .search-txt{
+    padding: 0;
+    width: 0px;
+    border:none;
+    background: none;
+    outline: none;
+    float: left;
+    font-size: 1rem;
+    line-height: 30px;
+    transition: .4s;
+    
+  }
+  .search-box:hover > .search-txt{
+    width: 200px;
+    padding: 0px;
+  }
+
+  .rotate:hover{
+    cursor: pointer;
+  }
+
+  /*1200이하시 nav 아이콘 변경*/
+  @media screen and (max-width : 1200px) {
+
+    .home-nav {
+        display: none;
+    }
+    .head-right {
+        display: none;
+    }
+    .home-nav2 {
+        display: flex;
+    }
+    .home-nav2 a:hover {
+        color: red;
+    }
+  }
+  
+.communityDetail  img {
+	max-width : 400px;
+}

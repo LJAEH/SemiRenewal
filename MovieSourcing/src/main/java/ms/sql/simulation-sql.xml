@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+<comment>simulation-sql.xml</comment>
+
+<entry key="genre">
+		SELECT GENRE_NO 
+		FROM GENRE
+	</entry>
+	
+<entry key="randommovie">
+		SELECT *
+		FROM MOVIE_INFORMATION_TABLE
+		WHERE MOVIE_NO = (
+  		SELECT MOVIE_NO
+    	FROM (
+        SELECT MOVIE_NO
+        FROM GENRE_MOVIE
+        WHERE GENRE_NO = ? 
+        ORDER BY DBMS_RANDOM.VALUE)
+    	WHERE ROWNUM = 1)
+	</entry>	
+	
+	
+	
+	
+	<entry key="RandamMoviePoster">
+	SELECT MOVIE_NO, MOVIE_POSTER
+FROM (
+  SELECT MOVIE_NO, MOVIE_POSTER, ROW_NUMBER() OVER (ORDER BY DBMS_RANDOM.VALUE) AS RN
+  FROM MOVIE_INFORMATION_TABLE
+  JOIN GENRE_MOVIE USING (MOVIE_NO)
+  JOIN GENRE USING (GENRE_NO)
+  WHERE GENRE_NO = ?
+)
+WHERE RN = 1
+	</entry>	
+	
+	
+	
+	<entry key="genreName">
+	SELECT GENRE
+	FROM GENRE
+	WHERE GENRE_NO = ?
+	</entry>	
+
+</properties>

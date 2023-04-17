@@ -1,0 +1,138 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 320px;
+    max-width: 700px;
+
+    background-color: black;
+    
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+}
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+.infomation > div > span {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.idSearch {
+    display : flex;
+    text-align: center;
+    margin : 16px auto 30px;
+    justify-content: center;
+}
+
+.top {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.infomation {
+    padding : 30px 30px;
+    margin : 8px 0;
+    border-radius: 15px;
+    background-color:  rgb(57, 41, 41);
+
+}
+.infomation > div {
+    display : flex;
+    flex-direction: column;
+    margin : 15px 0;
+}
+
+
+.email{
+    margin : 10px 0; 
+    display : flex;
+    justify-content: left;
+}
+
+.email > input {
+    width : 100%;
+    height : 50px;
+    margin-right: 5%;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+input::placeholder {
+    font-size: 16px;
+    padding-left: 15px;
+}
+
+hr {
+    margin : 40px 0;
+}
+
+
+.savebox{
+    display : flex;
+    flex-direction: column; 
+    margin : 60px auto 80px;
+}
+
+.savebox > button {
+    margin : auto;
+    width: 90%;
+    background-color:rgb(181, 133, 128);
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    height: 60px;
+    border-radius: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}

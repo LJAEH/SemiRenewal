@@ -1,0 +1,58 @@
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+main {
+  width: 100vw;
+}
+
+header {
+    margin: 0 auto;
+    width: 800px;
+    display: flex;
+    margin-top: 50px;
+    position: relative; /*부모요소에 relative하면 모바일에서
+                            위치가 이상하지 않음*/
+}
+header  > div:nth-child(1){
+   margin-top: 10px;
+}
+.home-nav {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+}
+
+.home-nav > li >a {
+    font-weight: bold;
+    margin-left: 100px;
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    padding: 0;
+}
+
+.home-nav > li a { 
+    color: white;
+    
+}
+    
+/* nav 밑줄 효과 */
+.home-nav > li a:after {
+    display:flex;
+    flex-direction:row;
+    margin-left: 100px;
+    content: '';
+    border-bottom: solid 2px #ea2129;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+.home-nav > li a:hover:after { transform: scaleX(1); }
+
+/* a태그 hover시에 커서 변경 */
+
+a:hover{
+cursor: pointer;
+}
+

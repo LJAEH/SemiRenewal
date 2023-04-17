@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>movie-sql.xml</comment>
+	
+	<!-- 감독으로 검색 -->
+	<entry key="pdMovieList">
+		SELECT MOVIE_NO, MOVIE_TITLE, MOVIE_POSTER, MOVIE_SCORE  
+		FROM MOVIE_INFORMATION_TABLE
+		JOIN PD_MOVIE USING(MOVIE_NO)
+		WHERE PD_NO = ?
+	</entry>
+	<!-- 배우로 검색 -->
+	<entry key="actorMovieList">
+		SELECT MOVIE_NO, MOVIE_TITLE, MOVIE_POSTER, MOVIE_SCORE  
+		FROM MOVIE_INFORMATION_TABLE
+		JOIN ACTOR_MOVIE USING(MOVIE_NO)
+		WHERE ACTOR_NO = ?
+	</entry>
+	<!-- 배우 -->
+	<entry key="actorInfo">
+		SELECT ACTOR_NO, ACTOR_NAME, ACTOR_PICTURE 
+		FROM ACTOR
+		WHERE ACTOR_NO = ?
+	</entry>
+	<!-- 감독 -->
+	<entry key="pdInfo">
+		SELECT PD_NO, PD_PICTURE, PD_PICTURE 
+		FROM PD
+		WHERE PD_NO = ?
+	</entry>
+	
+	<!-- 멤버닉네임 정보 -->
+	<entry key="memberName">
+		SELECT MEM_NO, MEM_NICK
+		FROM "MEMBER" 
+		WHERE MEM_NO = ?
+	</entry>
+	<!-- 해당 멤버의 본 영화 -->
+	<entry key="watchedList">
+		SELECT MOVIE_NO, MOVIE_TITLE, MOVIE_OPEN_DATE, MOVIE_POSTER, MOVIE_SCORE 
+		FROM MOVIE_INFORMATION_TABLE
+		JOIN WATCHED_MOVIE USING(MOVIE_NO)
+		WHERE MEM_NO = ?
+	</entry>
+	
+	<entry key="wishList">
+		SELECT MOVIE_NO, MOVIE_TITLE, MOVIE_OPEN_DATE, MOVIE_POSTER, MOVIE_SCORE 
+		FROM MOVIE_INFORMATION_TABLE
+		JOIN SELECT_MOVIE USING(MOVIE_NO)
+		WHERE MEM_NO = ?
+	</entry>
+	
+	<entry key="hateList">
+		SELECT MOVIE_NO, MOVIE_TITLE, MOVIE_OPEN_DATE, MOVIE_POSTER, MOVIE_SCORE 
+		FROM MOVIE_INFORMATION_TABLE
+		JOIN HATE_MOVIE USING(MOVIE_NO)
+		WHERE MEM_NO = ?
+	</entry>
+	
+	
+	<entry key="deleteWatchedList">
+		DELETE FROM WATCHED_MOVIE
+		WHERE MEM_NO = ? AND MOVIE_NO = ?
+	</entry>
+	
+	<entry key="deleteWishList">
+		DELETE FROM SELECT_MOVIE
+		WHERE MEM_NO = ? AND MOVIE_NO = ?
+	</entry>
+	
+	<entry key="deleteHateList">
+		DELETE FROM SELECT_MOVIE
+		WHERE MEM_NO = ? AND MOVIE_NO = ?
+	</entry>
+	
+	<entry key="reviewList">
+		SELECT MEM_NO, MOVIE_NO, MOVIE_POSTER, MOVIE_TITLE, REVIEW_CONTENT , REVIEW_SCORE , REVIEW_DATE
+		FROM REVIEW 
+		JOIN MOVIE_INFORMATION_TABLE USING(MOVIE_NO)
+		WHERE MEM_NO = ?
+	</entry>
+	
+		
+	<entry key="memberCount">
+		SELECT COUNT(*) AS HATE_MOVIE_CNT FROM HATE_MOVIE WHERE MEM_NO = ?
+		UNION ALL
+		SELECT COUNT(*) AS REVIEW_CNT FROM REVIEW WHERE MEM_NO = ?
+		UNION ALL
+		SELECT COUNT(*) AS COMMUNITY_TABLE_CNT FROM COMMUNITY_TABLE WHERE MEM_NO = ?
+		UNION ALL
+		SELECT COUNT(*) AS SELECT_MOVIE_CNT FROM SELECT_MOVIE WHERE MEM_NO = ?
+		UNION ALL
+		SELECT COUNT(*) AS WATCHED_MOVIE_CNT FROM WATCHED_MOVIE WHERE MEM_NO = ?
+	</entry>
+	
+			
+	<entry key="communityList">
+		SELECT COM_NO , COM_TITLE ,COM_DATE ,MEM_NO ,READ_COUNT 
+		FROM COMMUNITY_TABLE
+		WHERE MEM_NO = ?
+	</entry>
+	
+	<entry key="lifeMovie">
+		SELECT MOVIE_NO, MOVIE_TITLE, MOVIE_POSTER
+		FROM MOVIE_INFORMATION_TABLE 
+		JOIN LIFE_MOVIE USING(MOVIE_NO)
+		WHERE MEM_NO = ?
+	</entry>
+	
+	 
+</properties>

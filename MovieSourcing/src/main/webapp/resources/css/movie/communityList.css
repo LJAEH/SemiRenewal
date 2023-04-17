@@ -1,0 +1,136 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+span {
+    color: white;
+}
+
+body {
+    background-color: black;
+}
+
+#root {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+}
+
+#contents {
+    position : relative;
+    min-width : 480px;
+    background-color: black;
+    max-width: 700px;
+    margin : 0 auto;
+    box-sizing: border-box;
+    overflow : hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px;
+}
+
+
+.backpageHeader {
+    position : relative;
+    min-width : 320px;
+    background-color: black;
+    display : flex;
+    align-items: center;
+}
+
+.backpageDiv {
+    position : relative;
+    
+    max-width : 800px;
+    display : flex;
+}
+
+.backpage {
+    margin-top: 30px;
+    margin-left: 30px;
+    display : flex;
+}
+
+#backpageimg {
+    font-size: 30px;
+}
+
+section {
+    display : block;
+}
+
+.top {
+    display : flex;
+    text-align: center;
+    margin : 16px auto 30px;
+    justify-content: center;
+}
+#topName {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#contents > div {
+    margin : 10px 0;
+}
+
+.bold2 {
+    font-weight: bold;
+    font-size: 20px;
+}
+.reviewContainer {
+    min-height: 1000px;
+}
+
+.reviewbox {
+    margin : 10px 0;
+    background-color: rgb(22, 32, 22);
+    padding : 20px;
+    display : flex;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.review1 {
+    display : flex;
+    justify-content: space-between;
+}
+
+.moviewrap{
+    display : flex;
+}
+
+.reviewScoreBox{
+    display : flex;
+}
+
+.review {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.reviewInfo {
+    display : flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.span2{
+    color : gray;
+    align-items: center;
+    margin: auto 0;
+}
+
+#reviewName{
+    font-weight: bold;
+    overflow: hidden;
+}
